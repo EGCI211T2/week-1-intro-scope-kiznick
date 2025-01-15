@@ -1,8 +1,9 @@
-compile: main.c 
-	 gcc main.c -o ming
+DEST = kong
+compile: main.c
+	gcc main.c -o $(DEST)
 
-run: ming
-	 ./ming
+run: compile
+	./$(DEST)
 
-clean: ming
-	 rm ming
+clean:
+	rm -f $(DEST)
